@@ -3,7 +3,7 @@ const app = express();
 import path from "path";
 import dotenv from "dotenv";
 import colors from "colors";
-import { notFound, errorHandler } from "./middleware/errormiddleware.js";
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 import connectDB from "./config/db.js";
 
