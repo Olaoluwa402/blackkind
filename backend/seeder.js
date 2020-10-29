@@ -1,11 +1,11 @@
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-const colors = require("colors");
-const users = require("./data/users");
-const challenges = require("./data/challenges");
-const User = require("./models/userModel");
-const Challenge = require("./models/challengeModel");
-const connectDB = require("./config/db");
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import colors from "colors";
+import users from "./data/users.js";
+import challenges from "./data/challenges.js";
+import User from "./models/userModel.js";
+import Challenge from "./models/challengeModel.js";
+import connectDB from "./config/db.s";
 
 dotenv.config();
 

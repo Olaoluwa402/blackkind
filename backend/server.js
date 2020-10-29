@@ -1,15 +1,15 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const path = require("path");
-const dotenv = require("dotenv");
-const colors = require("colors");
-const { notFound, errorHandler } = require("./middleware/errormiddleware");
+import path from "path";
+import dotenv from "dotenv";
+import colors from "colors";
+import { notFound, errorHandler } from "./middleware/errormiddleware.js";
 
-const connectDB = require("./config/db");
+import connectDB from "./config/db.js";
 
 // route connection
-const userRoutes = require("./routes/userRoutes");
-const challengeRoutes = require("./routes/challengeRoutes");
+import userRoutes from "./routes/userRoutes.js";
+import challengeRoutes from "./routes/challengeRoutes.js";
 
 // cofig connection
 dotenv.config();
@@ -19,6 +19,8 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/challenges", challengeRoutes);
+
+const __dirname = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static(path.join(__dirname, "/frontend/build")));
