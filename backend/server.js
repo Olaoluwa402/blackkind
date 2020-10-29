@@ -1,15 +1,15 @@
-import express from "express";
+const express = require("express");
 const app = express();
-import path from "path";
-import dotenv from "dotenv";
-import colors from "colors";
-import { notFound, errorHandler } from "./middleware/errormiddleware.js";
+const path = require("path");
+const dotenv = require("dotenv");
+const colors = require("colors");
+const { notFound, errorHandler } = require("./middleware/errormiddleware");
 
-import connectDB from "./config/db.js";
+const connectDB = require("./config/db");
 
 // route connection
-import userRoutes from "./routes/userRoutes.js";
-import challengeRoutes from "./routes/challengeRoutes.js";
+const userRoutes = require("./routes/userRoutes");
+const challengeRoutes = require("./routes/challengeRoutes");
 
 // cofig connection
 dotenv.config();

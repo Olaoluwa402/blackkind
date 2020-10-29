@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import slug from "mongoose-slug-updater";
+const mongoose = require("mongoose");
+const slug = require("mongoose-slug-updater");
 mongoose.plugin(slug);
 
 const challengeSchema = mongoose.Schema({

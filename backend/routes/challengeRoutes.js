@@ -1,12 +1,12 @@
-import express from "express";
+const express = require("express");
 const router = express.Router();
-import {
+const {
 	getChallenges,
 	getChallengeById,
 	deleteChallenge,
 	createChallenge,
 	updateChallenge,
-} from "../controllers/challengeControllers.js";
+} = require("../controllers/challengeControllers");
 import { protect, admin } from "../middleware/authMiddleware.js";
 
 router.route("/").get(getChallenges).post(protect, admin, createChallenge);

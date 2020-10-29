@@ -1,6 +1,6 @@
-import express from "express";
+const express = require("express");
 const router = express.Router();
-import {
+const {
 	authUser,
 	registerUser,
 	getUserProfile,
@@ -9,8 +9,8 @@ import {
 	deleteUser,
 	getUserById,
 	updateUser,
-} from "../controllers/userControllers.js";
-import { protect, admin } from "../middleware/authMiddleware.js";
+} = require("../controllers/userControllers");
+const { protect, admin } = require("../middleware/authMiddleware");
 
 router.route("/").post(registerUser).get(protect, admin, getUsers);
 router.route("/login").post(authUser);

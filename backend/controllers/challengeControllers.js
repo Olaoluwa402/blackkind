@@ -1,5 +1,5 @@
-import asyncHandler from "express-async-handler";
-import Challenge from "../models/challengeModel.js";
+const asyncHandler = require("express-async-handler");
+const Challenge = require("../models/challengeModel");
 
 // @desc Fetch all challenges
 // @route GET /api/challenges
