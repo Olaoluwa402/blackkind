@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primaryColor: #af9a7d;
+	--mainWhite: #fff;
+	--accentColor: #fa9235;
+	--offWhite: #f7f7f7;
+	--mainBlack: #000000;
+	--mainGrey: #ececec;
+	--darkGrey: #cfcfcf;
+	--mainTransition: all 0.3s linear;
+	--mainSpacing: 3px;
+	--lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+	--darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+/* globals */
+body {
+	color: var(--mainBlack);
+	background: var(--mainWhite);
+	font-family: "Poppins", sans-serif;
+	line-height: 1.4;
+}
+
+.btn-primary {
+	display: inline-block;
+	text-decoration: none;
+	letter-spacing: var(--mainSpacing);
+	color: var(--mainBlack);
+	background: var(--primaryColor);
+	padding: 0.4rem 0.9rem;
+	border: 3px solid var(--primaryColor);
+	transition: var(--mainTransition);
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.btn-primary:hover {
+	background: transparent;
+	color: var(--primaryColor);
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+}
+.unique_underline h1 {
+	font-size: 3.5rem;
+	color: var(--mainWhite);
+	text-transform: uppercase;
+	font-weight: 300;
+	position: relative;
+	margin-bottom: 1rem;
+}
+
+.unique_underline h1::before,
+.unique_underline h1::after {
+	content: "";
+	position: absolute;
+	bottom: -0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--primaryColor);
+}
+
+.unique_underline h1::before {
+	width: 10rem;
+	height: 3px;
+	border-radius: 0.8rem;
+}
+
+.unique_underline h1::after {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 100%;
+	bottom: -1rem;
+}
+
+/* End global */
+
+@media (max-width: 768px) {
+	.container {
+		width: 100%;
+	}
+}

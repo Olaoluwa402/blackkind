@@ -1,0 +1,51 @@
+.badge-table-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2.5rem;
+	margin: 2rem 0;
+	overflow-x: auto;
+}
+
+.badge-table-wrapper table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	line-height: 2;
+	box-shadow: var(--shadow);
+}
+
+.badge-table-wrapper td,
+th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	text-align: center;
+}
+
+.badge-table-wrapper tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+.badge-table-wrapper table img {
+	width: 20%;
+}
+
+@media (max-width: 768px) {
+	.badge-table-wrapper {
+		padding: 2rem 0.5rem;
+		margin: 2rem 1rem;
+	}
+	.badge-table-wrapper table {
+		line-height: 1;
+	}
+	.badge-table-wrapper table img {
+		width: 50%;
+	}
+
+	.badge-table-wrapper td,
+	th {
+		font-size: 0.8rem;
+	}
+}

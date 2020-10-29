@@ -1,0 +1,60 @@
+.login-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2rem 0;
+	padding: 0.5rem 0.8rem;
+}
+.login-section__left {
+	flex: 1;
+	padding: 2.5rem;
+}
+
+.login-section__right {
+	flex: 1;
+	padding: 2.5rem;
+}
+
+/* Arrow down*/
+.arrow-down {
+	/* display: none; */
+	position: absolute;
+	top: 90vh;
+	left: 50%;
+	background: #ccc;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	padding: 0.8rem;
+	transition: all 2s ease;
+	animation: fromBottom;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+.arrow-down:hover {
+	color: #242424;
+}
+
+@keyframes fromBottom {
+	0% {
+		transform: translateY(-10px);
+	}
+	50% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+/* End Arroe down */
+
+@media (max-width: 768px) {
+	.login-section {
+		flex-direction: column;
+	}
+	.login-section__left,
+	.login-section__right {
+		padding: 0.8rem;
+	}
+}

@@ -1,0 +1,11 @@
+.challenge-header {
+	margin: 5rem 0 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.challenge-header__right button {
+	padding: 0.6rem 1rem;
+	cursor: pointer;
+	font-size: 1.2rem;
+}

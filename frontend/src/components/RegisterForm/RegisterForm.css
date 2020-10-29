@@ -1,0 +1,32 @@
+.register-form-wrapper {
+	background: var(--mainGrey);
+	padding: 1rem;
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	box-shadow: var(--darkShadow);
+	border-radius: 10px;
+}
+
+.register-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.register-form {
+	width: 100%;
+	padding: 2rem;
+}
+.register-form .form-control {
+	display: flex;
+	flex-direction: column;
+}
+.register-form input {
+	flex: 1;
+	padding: 0.8rem;
+	margin-bottom: 1rem;
+}

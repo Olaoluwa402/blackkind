@@ -1,0 +1,17 @@
+.profile-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 100px 0;
+}
+
+.profile-wrapper__box {
+	min-height: 500px;
+}
+
+.profile-wrapper__left {
+	flex: 1;
+}
+.profile-wrapper__right {
+	flex: 1;
+}

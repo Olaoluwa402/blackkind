@@ -1,0 +1,121 @@
+.footer-wrapper {
+	position: static;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* padding: 0.8rem 0.6rem; */
+	margin: 0;
+}
+
+.footer-gallery {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-rows: minmax(250px, auto);
+	padding: 2rem;
+}
+.footer-gallery__box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--mainGrey);
+	text-align: center;
+	padding: 1.5rem 2rem;
+	box-shadow: var(--shadow);
+}
+.footer-badge {
+	text-decoration: none;
+	transition: all ease-out 1s;
+}
+.footer-badge:hover {
+	transform: scale(1.1);
+}
+
+.footer-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #222;
+	min-height: 200px;
+	width: 100%;
+}
+
+.footer-section__one {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-section__one a {
+	display: inline-block;
+	font-size: 2.5rem;
+	color: var(--mainWhite);
+	text-decoration: none;
+}
+.footer-section__two {
+	flex: 1;
+	padding: 1.2rem;
+	display: flex;
+	justify-content: center;
+}
+.footer-section__two a {
+	padding-right: 0.5rem;
+	transition: all 1s ease-in-out;
+}
+.footer-section__two a:hover {
+	transform: translateY(-8px);
+}
+.footer-section__two a .social-icons {
+	color: var(--mainWhite);
+	font-size: 1.8rem;
+}
+
+/* footer section three */
+.footer-section__three {
+	flex: 1;
+}
+
+.footer-section__three ul {
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.footer-section__three ul li a {
+	color: var(--mainWhite);
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 1s ease-in-out;
+}
+.footer-section__three ul li a:hover,
+.footer-section__three ul li a:active {
+	color: #fa9235;
+}
+
+/* end footer section three */
+
+/* footer bottom */
+
+.footer-bottom {
+	display: flex;
+	min-height: 40px;
+	background-color: #222;
+}
+.footer-bottom p {
+	margin: auto;
+	color: var(--mainWhite);
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+/* end footer bottom */
+
+@media (max-width: 678px) {
+	.footer-section {
+		flex-direction: column;
+	}
+}

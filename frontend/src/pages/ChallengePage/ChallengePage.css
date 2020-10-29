@@ -1,0 +1,62 @@
+.challenge-table-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2.5rem;
+	margin: 2rem 0 0;
+	overflow-x: auto;
+}
+
+.challenge-table-wrapper table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	line-height: 2;
+	box-shadow: var(--shadow);
+}
+
+.challenge-table-wrapper input.checkbox-larger {
+	width: 40px;
+	height: 40px;
+}
+
+.challenge-table-wrapper td,
+th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	text-align: center;
+}
+
+.challenge-table-wrapper tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+.challenge-table-wrapper table img {
+	width: 20%;
+}
+
+.btn-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+	.challenge-table-wrapper {
+		padding: 2rem 0.5rem;
+		margin: 2rem 1rem 0;
+	}
+	.challenge-table-wrapper table {
+		line-height: 1;
+	}
+	.challenge-table-wrapper table img {
+		width: 50%;
+	}
+
+	.challenge-table-wrapper td,
+	th {
+		font-size: 0.8rem;
+	}
+}
