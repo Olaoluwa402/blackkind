@@ -4,7 +4,13 @@
 	align-items: center;
 	padding: 2.5rem;
 	margin: 2rem 0;
-	overflow-x: auto;
+	min-width: 600px;
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
+.badge-table-wrapper::-webkit-scrollbar {
+	display: none;
 }
 
 .badge-table-wrapper table {

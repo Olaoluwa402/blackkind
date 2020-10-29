@@ -26,6 +26,7 @@ body {
 	background: var(--mainWhite);
 	font-family: "Poppins", sans-serif;
 	line-height: 1.4;
+	overflow-x: hidden;
 }
 
 .btn-primary {
@@ -43,6 +44,10 @@ body {
 .btn-primary:hover {
 	background: transparent;
 	color: var(--primaryColor);
+}
+
+.btn-sm {
+	width: 50%;
 }
 
 .container {

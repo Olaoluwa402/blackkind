@@ -225,32 +225,10 @@ const ProfilePage = ({ location, history }) => {
 										}
 									></input>
 								</div>
-								<div className="form-control">
-									<label htmlFor="points">Points</label>
-									<input
-										type="text"
-										id="points"
-										value={point}
-										onChange={(e) =>
-											setPoint(e.target.value)
-										}
-										disabled
-									></input>
-								</div>
-								<div className="form-control">
-									<label htmlFor="level">Level</label>
-									<input
-										type="text"
-										id="level"
-										value={level}
-										onChange={(e) =>
-											setLevel(e.target.value)
-										}
-										disabled
-									></input>
-								</div>
+								<p>POINT: {point}</p>
+								<p>LEVEL: {level}</p>
 
-								<div className="form-actions">
+								<div className="form-actions btn-sm">
 									<button type="submit">Update</button>
 								</div>
 							</form>

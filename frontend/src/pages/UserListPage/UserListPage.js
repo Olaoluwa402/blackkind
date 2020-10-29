@@ -36,7 +36,6 @@ const UserListPage = ({ history }) => {
 	};
 	return (
 		<React.Fragment>
-			<h1>Users</h1>
 			{successDelete && (
 				<Message message="defaultMessage">User Deleted</Message>
 			)}

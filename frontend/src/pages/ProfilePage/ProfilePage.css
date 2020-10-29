@@ -11,7 +11,41 @@
 
 .profile-wrapper__left {
 	flex: 1;
+	padding: 1.5rem;
+}
+.profile-wrapper__left label {
+	display: block;
+}
+
+.profile-wrapper__left input,
+p {
+	border: 0;
+	border-bottom: 1px solid #af9a7d;
+	width: 80%;
+	font-size: 0.9em;
+	padding: 7px 0;
 }
 .profile-wrapper__right {
 	flex: 1;
+	padding: 0;
+	margin: 0;
+}
+
+.profile-page__header h2 {
+	font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+	.profile-wrapper {
+		flex-direction: column;
+	}
+	.profile-wrapper__left {
+		padding: 0.6rem;
+	}
+	.profile-wrapper__left input {
+		width: 100%;
+	}
+	.container {
+		width: 100%;
+	}
 }
