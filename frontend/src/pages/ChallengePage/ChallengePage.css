@@ -4,9 +4,7 @@
 	align-items: center;
 	padding: 2.5rem;
 	margin: 2rem 0 0;
-	min-width: 600px;
 	overflow-x: scroll;
-	white-space: nowrap;
 }
 
 .challenge-table-wrapper::-webkit-scrollbar {
