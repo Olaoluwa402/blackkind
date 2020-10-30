@@ -42,7 +42,7 @@ const ChallengePage = (prop) => {
 				<Message message="dangerMessage">{error}</Message>
 			) : (
 				<React.Fragment>
-					<div className="container">
+					<div className="">
 						<div className="challenge-table-wrapper">
 							<table>
 								<thead>

@@ -1,8 +1,9 @@
 .profile-wrapper {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	margin: 100px 0;
+	width: 100%;
 }
 
 .profile-wrapper__box {
@@ -38,14 +39,17 @@ p {
 @media (max-width: 768px) {
 	.profile-wrapper {
 		flex-direction: column;
-	}
-	.profile-wrapper__left {
-		padding: 0.6rem;
+		justify-content: center;
 	}
 	.profile-wrapper__left input {
-		width: 100%;
+		width: 80%;
 	}
 	.container {
-		width: 100%;
+		width: 90%;
+	}
+	.profile-wrapper__left input,
+	p {
+		font-size: 0.9em;
+		padding: 7px 0;
 	}
 }

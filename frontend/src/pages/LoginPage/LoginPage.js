@@ -35,12 +35,13 @@ const LoginPage = ({ location, history }) => {
 	};
 	return (
 		<React.Fragment>
+			{loading && <Spinner />}
+			{error && <Message message="dangerMessage">{error}</Message>}
 			<div className="login-page-wrapper">
 				<div className="login-header">
 					<img src={require("../../images/login.jpeg")} alt="login" />
 				</div>
-				{loading && <Spinner />}
-				{error && <Message message="dangerMessage">{error}</Message>}
+
 				<div className="login-form-wrapper">
 					<form className="login-form" onSubmit={submitHandler}>
 						<div className="form-control">

@@ -103,8 +103,8 @@ const ChallengeListPage = ({ history, match }) => {
 			) : error ? (
 				<Message message="dangerMessage">{error}</Message>
 			) : (
-				<div className="container">
-					<div className="badge-table-wrapper">
+				<div className="">
+					<div className="challenge-table-wrapper">
 						<table>
 							<thead>
 								<tr>

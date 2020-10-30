@@ -1,22 +1,23 @@
 .badge-table-wrapper {
-	/* display: flex;
-	justify-content: center;
-	align-items: center; */
+	align-items: center;
 	padding: 2.5rem;
 	margin: 2rem 0;
 	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
 }
 
-/* .badge-table-wrapper::-webkit-scrollbar {
+.badge-table-wrapper::-webkit-scrollbar {
 	display: none;
-} */
+}
 
 .badge-table-wrapper table {
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
+	border-spacing: 0;
 	width: 100%;
+	min-width: 700px;
 	text-align: center;
-	line-height: 2;
 	box-shadow: var(--shadow);
 }
 
@@ -26,6 +27,7 @@ th {
 	text-align: left;
 	padding: 8px;
 	text-align: center;
+	line-height: 1rem;
 }
 
 .badge-table-wrapper tr:nth-child(even) {
@@ -33,7 +35,7 @@ th {
 }
 
 .badge-table-wrapper table img {
-	width: 20%;
+	width: 50%;
 }
 
 @media (max-width: 768px) {
@@ -48,8 +50,14 @@ th {
 		width: 50%;
 	}
 
-	.badge-table-wrapper td,
+	/* .badge-table-wrapper td,
 	th {
 		font-size: 0.8rem;
+	} */
+}
+
+@media (max-width: 500px) {
+	.badge-table-wrapper table img {
+		width: 30%;
 	}
 }

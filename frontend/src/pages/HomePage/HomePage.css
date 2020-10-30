@@ -3,16 +3,17 @@
 	justify-content: space-between;
 	align-items: center;
 	margin: 2rem 0;
-	padding: 0.5rem 0.8rem;
+	background-color: red;
+	/* padding: 0.5rem 0.8rem; */
 }
 .login-section__left {
 	flex: 1;
-	padding: 2.5rem;
+	/* padding: 2.5rem; */
 }
 
 .login-section__right {
 	flex: 1;
-	padding: 2.5rem;
+	/* padding: 2.5rem; */
 }
 
 /* Arrow down*/
@@ -52,9 +53,13 @@
 @media (max-width: 768px) {
 	.login-section {
 		flex-direction: column;
+		justify-content: center;
 	}
-	.login-section__left,
+	/* .login-section__left,
 	.login-section__right {
 		padding: 0.8rem;
+	} */
+	.container {
+		width: 100%;
 	}
 }

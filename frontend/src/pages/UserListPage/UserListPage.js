@@ -48,12 +48,7 @@ const UserListPage = ({ history }) => {
 			) : (
 				<div className="container">
 					<h1>Users</h1>
-					<div
-						className="badge-table-wrapper"
-						style={{
-							"overflow-x": "auto",
-						}}
-					>
+					<div className="badge-table-wrapper">
 						<table>
 							<thead>
 								<tr>
