@@ -38,16 +38,16 @@ const UserListPage = ({ history }) => {
 	// let flow = "overflow-x";
 	return (
 		<React.Fragment>
-			{successDelete && (
-				<Message message="defaultMessage">User Deleted</Message>
-			)}
-			{loading ? (
-				<Spinner />
-			) : error ? (
-				<Message message="dangerMessage">{error}</Message>
-			) : (
-				<div className="container">
-					<h1>Users</h1>
+			<div className="container">
+				<h1>Users</h1>
+				{successDelete && (
+					<Message message="defaultMessage">User Deleted</Message>
+				)}
+				{loading ? (
+					<Spinner />
+				) : error ? (
+					<Message message="dangerMessage">{error}</Message>
+				) : (
 					<div className="badge-table-wrapper">
 						<table>
 							<thead>
@@ -107,8 +107,8 @@ const UserListPage = ({ history }) => {
 							</tbody>
 						</table>
 					</div>
-				</div>
-			)}
+				)}
+			</div>
 		</React.Fragment>
 	);
 };
