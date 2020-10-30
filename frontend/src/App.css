@@ -50,6 +50,10 @@ body {
 	width: 50%;
 }
 
+.my-auto {
+	margin: 3.5rem 0;
+}
+
 .container {
 	width: 80%;
 	margin: 0 auto;

@@ -38,7 +38,7 @@ const UserListPage = ({ history }) => {
 	// let flow = "overflow-x";
 	return (
 		<React.Fragment>
-			<div className="container">
+			<div className="container my-auto">
 				<h1>Users</h1>
 				{successDelete && (
 					<Message message="defaultMessage">User Deleted</Message>
