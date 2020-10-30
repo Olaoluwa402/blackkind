@@ -19,7 +19,7 @@ const HomePage = ({ location, history }) => {
 	const dispatch = useDispatch();
 
 	const userLogin = useSelector((state) => state.userLogin);
-	const { loading, error, userInfo } = userLogin;
+	const { loading, error, success, userInfo } = userLogin;
 	const redirect = location.search ? location.search.split("=")[1] : "/";
 
 	// userInfo will be null if not logged in
@@ -47,8 +47,6 @@ const HomePage = ({ location, history }) => {
 				</Banner>
 			</Hero>
 			<main className="">
-				{loading && <Spinner />}
-				{error && <Message message="dangerMessage">{error}</Message>}
 				<section className="login-section" id="login">
 					<div className="login-section__left">
 						<img
@@ -64,6 +62,10 @@ const HomePage = ({ location, history }) => {
 							redirect={redirect}
 							setEmail={setEmail}
 							setPassword={setPassword}
+							loading={loading}
+							success={success}
+							error={error}
+							userInfo={userInfo}
 						/>
 					</div>
 				</section>

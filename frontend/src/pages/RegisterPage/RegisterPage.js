@@ -82,7 +82,9 @@ const RegisterPage = ({ location, history }) => {
 									placeholder="Enter your username"
 									value={username}
 									onChange={(e) =>
-										setUsername(e.target.value)
+										setUsername(
+											e.target.value.toLowerCase()
+										)
 									}
 								></input>
 							</div>

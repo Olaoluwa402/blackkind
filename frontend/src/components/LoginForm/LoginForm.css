@@ -7,18 +7,16 @@
 
 .login-header {
 	display: flex;
-	background: red;
 }
 .login-header img {
-	max-width: 25%;
+	max-width: 80%;
 	margin: auto;
 }
 
 .login-form-wrapper {
-	/* min-width: 350px; */
-	width: 100%;
+	width: 80%;
 	background-color: var(--mainGrey);
-	padding: 3rem;
+	padding: 3rem 5rem;
 	box-shadow: var(--darkShadow);
 	border: 1px solid #333;
 	border-radius: 10px;

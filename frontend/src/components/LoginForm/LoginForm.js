@@ -4,6 +4,9 @@ import { FaRegEnvelope } from "react-icons/fa";
 import { FaKey } from "react-icons/fa";
 import { FaSignInAlt } from "react-icons/fa";
 
+import Message from "../../components/Message/Message";
+import Spinner from "../../components/Spinner/Spinner";
+
 import "./LoginForm.css";
 
 const LoginForm = ({
@@ -13,6 +16,10 @@ const LoginForm = ({
 	password,
 	setEmail,
 	setPassword,
+	loading,
+	success,
+	error,
+	userInfo,
 }) => {
 	return (
 		<React.Fragment>
@@ -20,6 +27,13 @@ const LoginForm = ({
 				<div className="login-header">
 					<img src={require("../../images/login.jpeg")} alt="login" />
 				</div>
+				{loading && <Spinner />}
+				{error && <Message message="dangerMessage">{error}</Message>}
+				{success && (
+					<Message message="defaultMessage">
+						Welcome back {userInfo.username}
+					</Message>
+				)}
 				<div className="login-form-wrapper">
 					<form className="login-form" onSubmit={submitHandler}>
 						<div className="form-control">
