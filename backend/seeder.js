@@ -5,7 +5,7 @@ import users from "./data/users.js";
 import challenges from "./data/challenges.js";
 import User from "./models/userModel.js";
 import Challenge from "./models/challengeModel.js";
-import connectDB from "./config/db.s";
+import connectDB from "./config/db.js";
 
 dotenv.config();
 

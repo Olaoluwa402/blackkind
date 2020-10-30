@@ -63,7 +63,9 @@ const Header = ({ drawerClickHandler }) => {
 										<FaUser /> {userInfo.username}
 									</NavLink>
 									<div className="dropdown-content">
-										<Link to="/profile">Profile</Link>
+										<Link to={`/${userInfo.slug}`}>
+											Profile
+										</Link>
 										<Link to="" onClick={logoutHandler}>
 											Logout
 										</Link>

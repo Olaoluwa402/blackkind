@@ -12,6 +12,7 @@ const users = [
 		website: "https://example.com",
 		password: bcrypt.hashSync("123456", 10),
 		isAdmin: "true",
+		slug: "admin",
 	},
 	{
 		fullName: "John Henry",
@@ -22,6 +23,7 @@ const users = [
 		occupation: "Engineer",
 		website: "https://example.com",
 		password: bcrypt.hashSync("123456", 10),
+		slug: "john",
 	},
 	{
 		fullName: "Jane Henry",
@@ -32,6 +34,7 @@ const users = [
 		occupation: "Nurse",
 		website: "https://example.com",
 		password: bcrypt.hashSync("123456", 10),
+		slug: "jane",
 	},
 ];
 

@@ -55,7 +55,7 @@ const App = () => {
 							/>
 							<Route
 								exact
-								path="/profile"
+								path="/:profileId"
 								component={ProfilePage}
 							/>
 

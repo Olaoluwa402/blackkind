@@ -31,7 +31,7 @@ const ProfilePage = ({ location, history }) => {
 	const { userInfo } = userLogin;
 
 	const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
-	const { success } = userUpdateProfile;
+	const { success, error: errorUpdate } = userUpdateProfile;
 
 	// userInfo will be null if not logged in
 	useEffect(() => {
@@ -40,9 +40,8 @@ const ProfilePage = ({ location, history }) => {
 		} else {
 			if (!user.username || success) {
 				dispatch({ type: USER_UPDATE_PROFILE_RESET });
-				dispatch(getUserDetails("profile"));
+				dispatch(getUserDetails(userInfo.slug));
 			} else {
-				setUsername(user.username);
 				setEmail(user.email);
 				setBiodata(user.biodata);
 				setOccupation(user.occupation);
@@ -65,7 +64,6 @@ const ProfilePage = ({ location, history }) => {
 				updateUserProfile({
 					id: user._id,
 					fullName,
-					username,
 					biodata,
 					website,
 					occupation,
@@ -89,8 +87,13 @@ const ProfilePage = ({ location, history }) => {
 						</div>
 						<div className="profile-page-form-wrapper">
 							{error && (
-								<Message message="defaultMessage">
+								<Message message="dangerMessage">
 									{error}
+								</Message>
+							)}
+							{errorUpdate && (
+								<Message message="dangerMessage">
+									{errorUpdate}
 								</Message>
 							)}
 							{success && (
@@ -110,15 +113,7 @@ const ProfilePage = ({ location, history }) => {
 							>
 								<div className="form-control">
 									<label htmlFor="username">Username</label>
-									<input
-										type="text"
-										id="username"
-										placeholder="Enter your username"
-										value={username}
-										onChange={(e) =>
-											setUsername(e.target.value)
-										}
-									></input>
+									<p>{user.username}</p>
 								</div>
 								<div className="form-control">
 									<label htmlFor="fullname">Full Name</label>

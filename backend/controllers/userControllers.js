@@ -15,6 +15,7 @@ const authUser = asyncHandler(async (req, res) => {
 		res.json({
 			_id: user._id,
 			username: user.username,
+			slug: user.slug,
 			fullName: user.fullName,
 			email: user.email,
 			biodata: user.biodata,
@@ -86,6 +87,7 @@ const registerUser = asyncHandler(async (req, res) => {
 			level: user.level,
 			isAdmin: user.isAdmin,
 			token: generateToken(user._id),
+			slug: user.slug,
 		});
 	} else {
 		res.status(400);
@@ -122,39 +124,46 @@ const getUserProfile = asyncHandler(async (req, res) => {
 });
 
 const updateUserProfile = asyncHandler(async (req, res) => {
-	const user = await User.findById(req.user._id);
+	const emailExits = await User.findOne({ email: req.body.email });
 
-	if (user) {
-		user.username = req.body.username || user.username;
-		user.fullName = req.body.fullName || user.fullName;
-		user.biodata = req.body.biodata || user.biodata;
-		user.country = req.body.country || user.country;
-		user.occupation = req.body.occupation || user.occupation;
-		user.website = req.body.website || user.website;
-		user.email = req.body.email || user.email;
-		if (req.body.password) {
-			user.password = req.body.password;
-		}
-
-		const updatedUser = await user.save();
-
-		res.json({
-			_id: updatedUser._id,
-			username: updatedUser.username,
-			fullName: updatedUser.fullName,
-			email: updatedUser.email,
-			biodata: updatedUser.biodata,
-			website: updatedUser.website,
-			country: updatedUser.country,
-			occupation: updatedUser.occupation,
-			pointCount: updatedUser.pointCount,
-			level: updatedUser.level,
-			isAdmin: updatedUser.isAdmin,
-			token: generateToken(updatedUser._id),
-		});
+	if (emailExits) {
+		res.status(400);
+		throw new Error("Email already exist");
 	} else {
-		res.status(404);
-		throw new Error("User not found");
+		const user = await User.findById(req.user._id);
+
+		if (user) {
+			user.username = user.username;
+			user.fullName = req.body.fullName || user.fullName;
+			user.biodata = req.body.biodata || user.biodata;
+			user.country = req.body.country || user.country;
+			user.occupation = req.body.occupation || user.occupation;
+			user.website = req.body.website || user.website;
+			user.email = req.body.email || user.email;
+			if (req.body.password) {
+				user.password = req.body.password;
+			}
+
+			const updatedUser = await user.save();
+
+			res.json({
+				_id: updatedUser._id,
+				username: updatedUser.username,
+				fullName: updatedUser.fullName,
+				email: updatedUser.email,
+				biodata: updatedUser.biodata,
+				website: updatedUser.website,
+				country: updatedUser.country,
+				occupation: updatedUser.occupation,
+				pointCount: updatedUser.pointCount,
+				level: updatedUser.level,
+				isAdmin: updatedUser.isAdmin,
+				token: generateToken(updatedUser._id),
+			});
+		} else {
+			res.status(404);
+			throw new Error("User not found");
+		}
 	}
 });
 
