@@ -14,12 +14,15 @@ const BadgesPage = (props) => {
 				></Banner>
 			</Hero>
 			<div className="container">
-				<div className="badge-table-wrapper">
+				<div
+					className="badge-table-wrapper"
+					style={{ "overflow-x": "auto" }}
+				>
 					<table>
 						<tr>
 							<th>BADGE ICON</th>
 							<th>BADGE NAME</th>
-							<th>POINTS REQUIRED TO OBTAIN IT</th>
+							<th>POINTS REQUIRED</th>
 						</tr>
 						<tr>
 							<td>

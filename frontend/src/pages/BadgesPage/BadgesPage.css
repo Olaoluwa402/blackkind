@@ -1,15 +1,15 @@
 .badge-table-wrapper {
-	display: flex;
+	/* display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center; */
 	padding: 2.5rem;
 	margin: 2rem 0;
-	overflow-x: scroll;
+	width: 100%;
 }
 
-.badge-table-wrapper::-webkit-scrollbar {
+/* .badge-table-wrapper::-webkit-scrollbar {
 	display: none;
-}
+} */
 
 .badge-table-wrapper table {
 	font-family: arial, sans-serif;

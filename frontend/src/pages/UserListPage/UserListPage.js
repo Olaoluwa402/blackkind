@@ -34,6 +34,8 @@ const UserListPage = ({ history }) => {
 			dispatch(deleteUser(id));
 		}
 	};
+
+	// let flow = "overflow-x";
 	return (
 		<React.Fragment>
 			{successDelete && (
@@ -46,7 +48,12 @@ const UserListPage = ({ history }) => {
 			) : (
 				<div className="container">
 					<h1>Users</h1>
-					<div className="badge-table-wrapper">
+					<div
+						className="badge-table-wrapper"
+						style={{
+							"overflow-x": "auto",
+						}}
+					>
 						<table>
 							<thead>
 								<tr>
