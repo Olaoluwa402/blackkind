@@ -61,7 +61,8 @@
 	.login-section {
 		flex-direction: column;
 	}
-	/* .login-form-wrapper {
-		padding: 0.8rem;
-	} */
+	.login-header img {
+		max-width: 100%;
+		margin: auto;
+	}
 }
