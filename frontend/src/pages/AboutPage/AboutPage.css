@@ -23,4 +23,56 @@
 .about-blackkind__right {
 	grid-column-start: 2;
 	grid-column-end: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.about-blackkind {
+		grid-template-columns: 1fr;
+	}
+
+	.about-blackkind__left {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.about-blackkind__right {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 500px) {
+	.about-blackkind {
+		grid-template-columns: 1fr;
+	}
+
+	.about-blackkind__left {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.about-blackkind__right {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
 }

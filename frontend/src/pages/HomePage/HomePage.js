@@ -46,7 +46,7 @@ const HomePage = ({ location, history }) => {
 					</Link>
 				</Banner>
 			</Hero>
-			<main className="container">
+			<main className="">
 				{loading && <Spinner />}
 				{error && <Message message="dangerMessage">{error}</Message>}
 				<section className="login-section" id="login">
