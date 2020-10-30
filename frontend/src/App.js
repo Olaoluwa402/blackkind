@@ -55,15 +55,10 @@ const App = () => {
 							/>
 							<Route
 								exact
-								path="/:profileId"
-								component={ProfilePage}
-							/>
-
-							<Route
-								exact
 								path="/challenges"
 								component={ChallengePage}
 							/>
+
 							<Route
 								exact
 								path="/badges"
@@ -80,6 +75,11 @@ const App = () => {
 								exact
 								path="/admin/userlist"
 								component={UserListPage}
+							/>
+							<Route
+								exact
+								path="/:profileId"
+								component={ProfilePage}
 							/>
 							<Route
 								exact

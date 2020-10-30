@@ -13,11 +13,13 @@ import ChallengeRow from "../../components/ChallengeRow/ChallengeRow";
 import "./ChallengePage.css";
 
 const ChallengePage = (prop) => {
-	const [isComplete, setIsComplete] = useState(false);
-	const dispatch = useDispatch();
-
 	const challengeList = useSelector((state) => state.challengeList);
 	const { loading, error, challenges } = challengeList;
+
+	const [isComplete, setIsComplete] = useState(false);
+	const [list, setList] = React.useState(challenges);
+	const dispatch = useDispatch();
+	console.log(list);
 
 	useEffect(() => {
 		dispatch(listChallenges());
