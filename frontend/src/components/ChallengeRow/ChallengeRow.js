@@ -2,37 +2,23 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 
 import "./ChallengeRow.css";
-const ChallengeRow = ({
-	challenge,
-	submitHandler,
-	isComplete,
-	setIsComplete,
-}) => {
+const ChallengeRow = ({ item, setList, handleChangeCheckbox }) => {
+	console.log(item);
 	return (
 		<React.Fragment>
 			<tbody>
 				<tr>
-					<td>{challenge.name}</td>
-					<td>{challenge.description}</td>
+					<td>{item.name}</td>
+					<td>{item.description}</td>
 					<td>
-						<form
-							className="challenge-submit-btn"
-							onSubmit={submitHandler}
-						>
-							<input
-								type="checkbox"
-								id="challenge"
-								onChange={(e) =>
-									setIsComplete(e.target.checked)
-								}
-								className="checkbox-larger"
-							/>
-							<button type="submit">
-								<FaCheck />
-							</button>
-						</form>
+						<input
+							type="checkbox"
+							checked={item.isComplete}
+							onChange={() => handleChangeCheckbox(item.id)}
+							className="checkbox-larger"
+						/>
 					</td>
-					<td>{challenge.status}</td>
+					<td>{item.status}</td>
 				</tr>
 			</tbody>
 		</React.Fragment>

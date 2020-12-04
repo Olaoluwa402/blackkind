@@ -16,19 +16,31 @@ const ChallengePage = (prop) => {
 	const challengeList = useSelector((state) => state.challengeList);
 	const { loading, error, challenges } = challengeList;
 
-	const [isComplete, setIsComplete] = useState(false);
-	const [list, setList] = React.useState(challenges);
+	const [list, setList] = useState([]);
 	const dispatch = useDispatch();
-	console.log(list);
 
+	// useEffect(() => {
+	// 	dispatch(listChallenges());
+	// }, [dispatch]);
+	//
 	useEffect(() => {
+		setList(challenges);
 		dispatch(listChallenges());
-	}, [dispatch]);
+	}, [dispatch, challenges]);
+	
 
-	const submitHandler = (e) => {
-		e.preventDefault();
-		console.log(isComplete);
+	const handleChangeCheckbox = (id) => {
+		setList(
+			list.map((item) => {
+				if (item.id === id) {
+					return { ...item, isComplete: !item.isComplete };
+				} else {
+					return item;
+				}
+			})
+		);
 	};
+
 	return (
 		<React.Fragment>
 			<Hero hero="challengeHero">
@@ -55,13 +67,14 @@ const ChallengePage = (prop) => {
 										<th>Status</th>
 									</tr>
 								</thead>
-								{challenges.map((challenge) => (
+								{list.map((item) => (
 									<ChallengeRow
-										key={challenge._id}
-										challenge={challenge}
-										submitHandler={submitHandler}
-										isComplete={isComplete}
-										setIsComplete={setIsComplete}
+										key={item._id}
+										item={item}
+										setList={setList}
+										handleChangeCheckbox={
+											handleChangeCheckbox
+										}
 									/>
 								))}
 							</table>

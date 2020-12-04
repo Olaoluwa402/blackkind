@@ -1,7 +1,7 @@
 import express from "express";
 const app = express();
 import path from "path";
-import dotenv from "dotenv";
+import dotenv from "dotenv"; 
 import colors from "colors";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
@@ -12,7 +12,7 @@ import userRoutes from "./routes/userRoutes.js";
 import challengeRoutes from "./routes/challengeRoutes.js";
 
 // cofig connection
-dotenv.config();
+dotenv.config(); 
 connectDB();
 
 app.use(express.json());

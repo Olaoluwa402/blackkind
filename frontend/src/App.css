@@ -7,12 +7,12 @@
 }
 
 :root {
-	--primaryColor: #af9a7d;
+	--primaryColor: #af79ad;
 	--mainWhite: #fff;
 	--accentColor: #fa9235;
 	--offWhite: #f7f7f7;
 	--mainBlack: #000000;
-	--mainGrey: #ececec;
+	--mainGrey: #;ececec
 	--darkGrey: #cfcfcf;
 	--mainTransition: all 0.3s linear;
 	--mainSpacing: 3px;
