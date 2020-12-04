@@ -1,2 +1,2 @@
 # blackkind
-Social task tracking app built with reactjs and nodejs and mongodb database
+Social task completed tracking app built with reactjs and nodejs and mongodb database
